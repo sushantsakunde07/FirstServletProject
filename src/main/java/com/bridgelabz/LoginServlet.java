@@ -30,8 +30,8 @@ public class LoginServlet extends HttpServlet {
         String password = getServletConfig().getInitParameter("password");
 
         String regexName = "^[A-Z]{1}[a-zA-Z]{2,}$";
-
-        if (userID.equals(user) && password.equals(pwd) && regexName.equals(user)) {
+        String regexPassword = "^(?=.*[0-9])(?=.*[@#$%^&+=])(?=.*[a-z])(?=.*[A-Z]){8,}$";
+        if (userID.equals(user) && password.equals(pwd) && regexName.equals(user) && regexPassword.equals(pwd)) {
             req.setAttribute("user", user);
             req.getRequestDispatcher("LoginSuccess.jsp").forward(req, resp);
         } else {
