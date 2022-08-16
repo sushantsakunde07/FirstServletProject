@@ -18,7 +18,6 @@ import javax.servlet.http.HttpServletResponse;
                 @WebInitParam(name = "password", value = "Sushant")
         }
 )
-
 public class LoginServlet extends HttpServlet {
 
     @Override
